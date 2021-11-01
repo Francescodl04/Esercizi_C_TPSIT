@@ -1,0 +1,1 @@
+Nel file di input il carattere "s" è stato contato 27 volte.
