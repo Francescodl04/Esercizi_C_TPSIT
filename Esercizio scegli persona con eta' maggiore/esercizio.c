@@ -16,28 +16,26 @@ typedef struct
     int eta_persona;
 } persona_T;
 
-persona_T inserisci()
+persona_T inserisci(persona_T p)
 {
+    return p;
 }
 
-void vecchio()
+void vecchio(persona_T p[numero_persone])
 {
-    int piu_vecchio = 0;
+    int indice_piu_vecchio = 0;
     int i;
     for (i = 0; i < numero_persone; i++)
     {
-        if (i == 0)
+        if (i == 0 || p[indice_piu_vecchio].eta_persona < p[i].eta_persona)
         {
-            piu_vecchio = 0;
-        }
-        else if (piu_vecchio < 0)
-        {
-            piu_vecchio = 0;
+            indice_piu_vecchio = i;
         }
     }
+    printf("\nLa persona piu' vecchia e' %s %s, che ha %d anni.", p[indice_piu_vecchio].nome_persona, p[indice_piu_vecchio].cognome_persona, p[indice_piu_vecchio].eta_persona);
 }
 
-int main(int argc, char *argv[])
+void main(int argc, char *argv[])
 {
     printf("\nBenvenuto nel programma.");
     int i, j;
@@ -51,19 +49,19 @@ int main(int argc, char *argv[])
             switch (j)
             {
             case 0:
-                scanf("%s", &p->nome_persona);
+                scanf("%s", &p[i].nome_persona);
                 break;
             case 1:
-                scanf("%s", &p->cognome_persona);
+                scanf("%s", &p[i].cognome_persona);
                 break;
             case 2:
-                scanf("%d", &p->eta_persona);
+                scanf("%d", &p[i].eta_persona);
                 break;
             }
         }
     }
+    vecchio(p);
     fflush(stdin);
     printf("\nPer uscire dal programma premere un tasto qualsiasi...");
     getchar();
-    return 0;
 }
