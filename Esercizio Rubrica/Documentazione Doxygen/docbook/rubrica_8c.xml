@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rubrica_8c" xml:lang="en-US">
+<title>C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c File Reference</title>
+<indexterm><primary>C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c</primary></indexterm>
+<para>
+
+<para>Il programma esegue la gestione di una semplice rubrica presente all&apos;interno di un file di testo (.txt) il cui percorso viene indicato nell&apos;invocazione del programma. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;ctype.h&gt;
+</programlisting><simplesect>
+    <title>Data Structures    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_contatto___t">Contatto_T</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_rubrica_8c_1abb491bc4ec07cded1065b58cb43a0938">acquisci_rubrica</link> (char percorso_file[200], <link linkend="_struct_contatto___t">Contatto_T</link> c[100])</para>
+
+<para>Permette di effettuare la lettura del file che contiene la rubrica, inserire le informazioni all&apos;interno di un array e restituire il numero di contatti. </para>
+</listitem>
+            <listitem><para>int <link linkend="_rubrica_8c_1a4c88c756ace1bba1a20d071a94865474">ricerca_contatto</link> (<link linkend="_struct_contatto___t">Contatto_T</link> c[100], char numero_telefono[100], int numero_contatti)</para>
+
+<para>Permette di effettuare la ricerca di un carattere in base al suo numero di telefono. </para>
+</listitem>
+            <listitem><para>void <link linkend="_rubrica_8c_1a17c06b4f4a645b3f2313367fbe1a1ffb">elimina_contatto</link> (char percorso_file[200], <link linkend="_struct_contatto___t">Contatto_T</link> c[100], int indice_contatto_da_eliminare, int numero_contatti)</para>
+
+<para>Permette di effettuare l&apos;eliminazione di un contatto e il successivo salvataggio della rubrica all&apos;interno del file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_rubrica_8c_1aefc644097ae684eb50bbbcbb035bbd75">aggiungi_contatto</link> (char percorso_file[200], <link linkend="_struct_contatto___t">Contatto_T</link> c[100], int numero_contatti)</para>
+
+<para>Permette di effettuare l&apos;aggiunta di un contatto e il successivo salvataggio della rubrica all&apos;interno del file. </para>
+</listitem>
+            <listitem><para>int <link linkend="_rubrica_8c_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+
+<para>Effettua controlli sugli argomenti inseriti all&apos;invocazione del programma e permette le visualizzazioni a schermo. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Il programma esegue la gestione di una semplice rubrica presente all&apos;interno di un file di testo (.txt) il cui percorso viene indicato nell&apos;invocazione del programma. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Francesco Di Lena </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>18/11/2021 </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_rubrica_8c_1abb491bc4ec07cded1065b58cb43a0938"/><section>
+    <title>acquisci_rubrica()</title>
+<indexterm><primary>acquisci_rubrica</primary><secondary>rubrica.c</secondary></indexterm>
+<indexterm><primary>rubrica.c</primary><secondary>acquisci_rubrica</secondary></indexterm>
+<para><computeroutput>int acquisci_rubrica (char percorso_file[200], <link linkend="_struct_contatto___t">Contatto_T</link> c[100])</computeroutput></para><para>
+
+<para>Permette di effettuare la lettura del file che contiene la rubrica, inserire le informazioni all&apos;interno di un array e restituire il numero di contatti. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>char</entry><entry>
+<para>percorso_file [200]: indica dove si trova il file di input </para>
+</entry>
+                            </row>
+                            <row>
+<entry><link linkend="_struct_contatto___t">Contatto_T</link></entry><entry>
+<para>c [100]: puntatore alle variabili presenti all&apos;interno dell&apos;omonima struct </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int numero_contatti: ritorna il numero di contatti presenti all&apos;interno del file in input </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_rubrica_8c_1aefc644097ae684eb50bbbcbb035bbd75"/><section>
+    <title>aggiungi_contatto()</title>
+<indexterm><primary>aggiungi_contatto</primary><secondary>rubrica.c</secondary></indexterm>
+<indexterm><primary>rubrica.c</primary><secondary>aggiungi_contatto</secondary></indexterm>
+<para><computeroutput>void aggiungi_contatto (char percorso_file[200], <link linkend="_struct_contatto___t">Contatto_T</link> c[100], int numero_contatti)</computeroutput></para><para>
+
+<para>Permette di effettuare l&apos;aggiunta di un contatto e il successivo salvataggio della rubrica all&apos;interno del file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>char</entry><entry>
+<para>percorso_file [200]: indica dove si trova il file di input </para>
+</entry>
+                            </row>
+                            <row>
+<entry><link linkend="_struct_contatto___t">Contatto_T</link></entry><entry>
+<para>c [100]: puntatore alle variabili presenti all&apos;interno dell&apos;omonima struct </para>
+</entry>
+                            </row>
+                            <row>
+<entry>int</entry><entry>
+<para>numero_contatti: il numero di contatti presenti nella rubrica </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Non ritorna nulla, visto che la funzione è void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_rubrica_8c_1a17c06b4f4a645b3f2313367fbe1a1ffb"/><section>
+    <title>elimina_contatto()</title>
+<indexterm><primary>elimina_contatto</primary><secondary>rubrica.c</secondary></indexterm>
+<indexterm><primary>rubrica.c</primary><secondary>elimina_contatto</secondary></indexterm>
+<para><computeroutput>void elimina_contatto (char percorso_file[200], <link linkend="_struct_contatto___t">Contatto_T</link> c[100], int indice_contatto_da_eliminare, int numero_contatti)</computeroutput></para><para>
+
+<para>Permette di effettuare l&apos;eliminazione di un contatto e il successivo salvataggio della rubrica all&apos;interno del file. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>char</entry><entry>
+<para>percorso_file [200]: indica dove si trova il file di input </para>
+</entry>
+                            </row>
+                            <row>
+<entry><link linkend="_struct_contatto___t">Contatto_T</link></entry><entry>
+<para>c [100]: puntatore alle variabili presenti all&apos;interno dell&apos;omonima struct </para>
+</entry>
+                            </row>
+                            <row>
+<entry>int</entry><entry>
+<para>indice_contatto_da_eliminare: l&apos;indice, cioè la posizione all&apos;interno dell&apos;array <link linkend="_struct_contatto___t">Contatto_T</link>, del contatto da eliminare </para>
+</entry>
+                            </row>
+                            <row>
+<entry>int</entry><entry>
+<para>numero_contatti: il numero di contatti presenti nella rubrica </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Non ritorna nulla, visto che la funzione è void </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_rubrica_8c_1a0ddf1224851353fc92bfbff6f499fa97"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>rubrica.c</secondary></indexterm>
+<indexterm><primary>rubrica.c</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char * argv[])</computeroutput></para><para>
+
+<para>Effettua controlli sugli argomenti inseriti all&apos;invocazione del programma e permette le visualizzazioni a schermo. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>int</entry><entry>
+<para>argc: indica la quantità di argomenti con cui il programma è stato invocato </para>
+</entry>
+                            </row>
+                            <row>
+<entry>char</entry><entry>
+<para>*argv[]: contiene gli argomenti con cui il programma è stato invocato </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>La funzione ritorna 0 </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_rubrica_8c_1a4c88c756ace1bba1a20d071a94865474"/><section>
+    <title>ricerca_contatto()</title>
+<indexterm><primary>ricerca_contatto</primary><secondary>rubrica.c</secondary></indexterm>
+<indexterm><primary>rubrica.c</primary><secondary>ricerca_contatto</secondary></indexterm>
+<para><computeroutput>int ricerca_contatto (<link linkend="_struct_contatto___t">Contatto_T</link> c[100], char numero_telefono[100], int numero_contatti)</computeroutput></para><para>
+
+<para>Permette di effettuare la ricerca di un carattere in base al suo numero di telefono. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry><link linkend="_struct_contatto___t">Contatto_T</link></entry><entry>
+<para>c [100]: puntatore alle variabili presenti all&apos;interno dell&apos;omonima struct </para>
+</entry>
+                            </row>
+                            <row>
+<entry>int</entry><entry>
+<para>numero_telefono [100]: il numero di telefono ricercato </para>
+</entry>
+                            </row>
+                            <row>
+<entry>int</entry><entry>
+<para>numero_contatti: il numero di contatti presenti nella rubrica </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int indice_ricerca: ritorna l&apos;indice, cioè la posizione all&apos;interno dell&apos;array <link linkend="_struct_contatto___t">Contatto_T</link>, dell&apos;elemento ricercato </para>
+</formalpara>
+</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_contatto___t" xml:lang="en-US">
+<title>Contatto_T Struct Reference</title>
+<indexterm><primary>Contatto_T</primary></indexterm>
+<simplesect>
+    <title>Data Fields    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_struct_contatto___t_1aa4e90ca99702bac9e1c78503ad86acba"/>char <emphasis role="strong">nome</emphasis> [100]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_contatto___t_1a779f926c7532e5c60c17ef7775932970"/>char <emphasis role="strong">cognome</emphasis> [100]</para>
+</listitem>
+            <listitem><para><anchor xml:id="_struct_contatto___t_1ab3219f9bf59dd7dcaab7f934fa4098bb"/>char <emphasis role="strong">numero_telefono</emphasis> [10]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>struct</entry><entry>
+<para><link linkend="_struct_contatto___t">Contatto_T</link> Viene inizializzata la struct <link linkend="_struct_contatto___t">Contatto_T</link> per contenere le informazioni di un contatto telefonico, ovvero nome, cognome e numero di telefono. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+The documentation for this struct was generated from the following file:</para>
+C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/<link linkend="_rubrica_8c">rubrica.c</link></section>
+</section>

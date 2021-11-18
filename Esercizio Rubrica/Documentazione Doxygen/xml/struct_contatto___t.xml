@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.2" xml:lang="en-US">
+  <compounddef id="struct_contatto___t" kind="struct" language="C++" prot="public">
+    <compoundname>Contatto_T</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_contatto___t_1aa4e90ca99702bac9e1c78503ad86acba" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char nome[100]</definition>
+        <argsstring>[100]</argsstring>
+        <name>nome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c" line="16" column="10" bodyfile="C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_contatto___t_1a779f926c7532e5c60c17ef7775932970" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char cognome[100]</definition>
+        <argsstring>[100]</argsstring>
+        <name>cognome</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c" line="17" column="10" bodyfile="C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_contatto___t_1ab3219f9bf59dd7dcaab7f934fa4098bb" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char numero_telefono[10]</definition>
+        <argsstring>[10]</argsstring>
+        <name>numero_telefono</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c" line="18" column="10" bodyfile="C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>struct</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="struct_contatto___t" kindref="compound">Contatto_T</ref> Viene inizializzata la struct <ref refid="struct_contatto___t" kindref="compound">Contatto_T</ref> per contenere le informazioni di un contatto telefonico, ovvero nome, cognome e numero di telefono. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c" line="14" column="1" bodyfile="C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c" bodystart="15" bodyend="20"/>
+    <listofallmembers>
+      <member refid="struct_contatto___t_1a779f926c7532e5c60c17ef7775932970" prot="public" virt="non-virtual"><scope>Contatto_T</scope><name>cognome</name></member>
+      <member refid="struct_contatto___t_1aa4e90ca99702bac9e1c78503ad86acba" prot="public" virt="non-virtual"><scope>Contatto_T</scope><name>nome</name></member>
+      <member refid="struct_contatto___t_1ab3219f9bf59dd7dcaab7f934fa4098bb" prot="public" virt="non-virtual"><scope>Contatto_T</scope><name>numero_telefono</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

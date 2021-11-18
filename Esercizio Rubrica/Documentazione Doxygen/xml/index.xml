@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.2" xml:lang="en-US">
+  <compound refid="struct_contatto___t" kind="struct"><name>Contatto_T</name>
+    <member refid="struct_contatto___t_1aa4e90ca99702bac9e1c78503ad86acba" kind="variable"><name>nome</name></member>
+    <member refid="struct_contatto___t_1a779f926c7532e5c60c17ef7775932970" kind="variable"><name>cognome</name></member>
+    <member refid="struct_contatto___t_1ab3219f9bf59dd7dcaab7f934fa4098bb" kind="variable"><name>numero_telefono</name></member>
+  </compound>
+  <compound refid="rubrica_8c" kind="file"><name>rubrica.c</name>
+    <member refid="rubrica_8c_1abb491bc4ec07cded1065b58cb43a0938" kind="function"><name>acquisci_rubrica</name></member>
+    <member refid="rubrica_8c_1a4c88c756ace1bba1a20d071a94865474" kind="function"><name>ricerca_contatto</name></member>
+    <member refid="rubrica_8c_1a17c06b4f4a645b3f2313367fbe1a1ffb" kind="function"><name>elimina_contatto</name></member>
+    <member refid="rubrica_8c_1aefc644097ae684eb50bbbcbb035bbd75" kind="function"><name>aggiungi_contatto</name></member>
+    <member refid="rubrica_8c_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+</doxygenindex>

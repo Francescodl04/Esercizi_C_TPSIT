@@ -1,0 +1,154 @@
+\hypertarget{rubrica_8c}{}\doxysection{C\+:/\+Users/\+Famiglia Di Lena/\+Documents/\+Scuola/\+Secondaria di Secondo Grado/\+IV F A.\+S. 2021-\/2022/\+TPSIT/\+Programmi in C/\+Esercizio Rubrica/rubrica.c File Reference}
+\label{rubrica_8c}\index{C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-\/2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c@{C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-\/2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c}}
+
+
+Il programma esegue la gestione di una semplice rubrica presente all\textquotesingle{}interno di un file di testo (.txt) il cui percorso viene indicato nell\textquotesingle{}invocazione del programma.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{rubrica_8c_abb491bc4ec07cded1065b58cb43a0938}{acquisci\+\_\+rubrica}} (char percorso\+\_\+file\mbox{[}200\mbox{]}, \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}} c\mbox{[}100\mbox{]})
+\begin{DoxyCompactList}\small\item\em Permette di effettuare la lettura del file che contiene la rubrica, inserire le informazioni all\textquotesingle{}interno di un array e restituire il numero di contatti. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rubrica_8c_a4c88c756ace1bba1a20d071a94865474}{ricerca\+\_\+contatto}} (\mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}} c\mbox{[}100\mbox{]}, char numero\+\_\+telefono\mbox{[}100\mbox{]}, int numero\+\_\+contatti)
+\begin{DoxyCompactList}\small\item\em Permette di effettuare la ricerca di un carattere in base al suo numero di telefono. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rubrica_8c_a17c06b4f4a645b3f2313367fbe1a1ffb}{elimina\+\_\+contatto}} (char percorso\+\_\+file\mbox{[}200\mbox{]}, \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}} c\mbox{[}100\mbox{]}, int indice\+\_\+contatto\+\_\+da\+\_\+eliminare, int numero\+\_\+contatti)
+\begin{DoxyCompactList}\small\item\em Permette di effettuare l\textquotesingle{}eliminazione di un contatto e il successivo salvataggio della rubrica all\textquotesingle{}interno del file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rubrica_8c_aefc644097ae684eb50bbbcbb035bbd75}{aggiungi\+\_\+contatto}} (char percorso\+\_\+file\mbox{[}200\mbox{]}, \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}} c\mbox{[}100\mbox{]}, int numero\+\_\+contatti)
+\begin{DoxyCompactList}\small\item\em Permette di effettuare l\textquotesingle{}aggiunta di un contatto e il successivo salvataggio della rubrica all\textquotesingle{}interno del file. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rubrica_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Effettua controlli sugli argomenti inseriti all\textquotesingle{}invocazione del programma e permette le visualizzazioni a schermo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Il programma esegue la gestione di una semplice rubrica presente all\textquotesingle{}interno di un file di testo (.txt) il cui percorso viene indicato nell\textquotesingle{}invocazione del programma. 
+
+\begin{DoxyAuthor}{Author}
+Francesco Di Lena 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18/11/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rubrica_8c_abb491bc4ec07cded1065b58cb43a0938}\label{rubrica_8c_abb491bc4ec07cded1065b58cb43a0938}} 
+\index{rubrica.c@{rubrica.c}!acquisci\_rubrica@{acquisci\_rubrica}}
+\index{acquisci\_rubrica@{acquisci\_rubrica}!rubrica.c@{rubrica.c}}
+\doxysubsubsection{\texorpdfstring{acquisci\_rubrica()}{acquisci\_rubrica()}}
+{\footnotesize\ttfamily int acquisci\+\_\+rubrica (\begin{DoxyParamCaption}\item[{char}]{percorso\+\_\+file\mbox{[}200\mbox{]},  }\item[{\mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}}]{c\mbox{[}100\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Permette di effettuare la lettura del file che contiene la rubrica, inserire le informazioni all\textquotesingle{}interno di un array e restituire il numero di contatti. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & percorso\+\_\+file \mbox{[}200\mbox{]}\+: indica dove si trova il file di input \\
+\hline
+{\em \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}} & c \mbox{[}100\mbox{]}\+: puntatore alle variabili presenti all\textquotesingle{}interno dell\textquotesingle{}omonima struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int numero\+\_\+contatti\+: ritorna il numero di contatti presenti all\textquotesingle{}interno del file in input 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rubrica_8c_aefc644097ae684eb50bbbcbb035bbd75}\label{rubrica_8c_aefc644097ae684eb50bbbcbb035bbd75}} 
+\index{rubrica.c@{rubrica.c}!aggiungi\_contatto@{aggiungi\_contatto}}
+\index{aggiungi\_contatto@{aggiungi\_contatto}!rubrica.c@{rubrica.c}}
+\doxysubsubsection{\texorpdfstring{aggiungi\_contatto()}{aggiungi\_contatto()}}
+{\footnotesize\ttfamily void aggiungi\+\_\+contatto (\begin{DoxyParamCaption}\item[{char}]{percorso\+\_\+file\mbox{[}200\mbox{]},  }\item[{\mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}}]{c\mbox{[}100\mbox{]},  }\item[{int}]{numero\+\_\+contatti }\end{DoxyParamCaption})}
+
+
+
+Permette di effettuare l\textquotesingle{}aggiunta di un contatto e il successivo salvataggio della rubrica all\textquotesingle{}interno del file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & percorso\+\_\+file \mbox{[}200\mbox{]}\+: indica dove si trova il file di input \\
+\hline
+{\em \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}} & c \mbox{[}100\mbox{]}\+: puntatore alle variabili presenti all\textquotesingle{}interno dell\textquotesingle{}omonima struct \\
+\hline
+{\em int} & numero\+\_\+contatti\+: il numero di contatti presenti nella rubrica \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non ritorna nulla, visto che la funzione è void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rubrica_8c_a17c06b4f4a645b3f2313367fbe1a1ffb}\label{rubrica_8c_a17c06b4f4a645b3f2313367fbe1a1ffb}} 
+\index{rubrica.c@{rubrica.c}!elimina\_contatto@{elimina\_contatto}}
+\index{elimina\_contatto@{elimina\_contatto}!rubrica.c@{rubrica.c}}
+\doxysubsubsection{\texorpdfstring{elimina\_contatto()}{elimina\_contatto()}}
+{\footnotesize\ttfamily void elimina\+\_\+contatto (\begin{DoxyParamCaption}\item[{char}]{percorso\+\_\+file\mbox{[}200\mbox{]},  }\item[{\mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}}]{c\mbox{[}100\mbox{]},  }\item[{int}]{indice\+\_\+contatto\+\_\+da\+\_\+eliminare,  }\item[{int}]{numero\+\_\+contatti }\end{DoxyParamCaption})}
+
+
+
+Permette di effettuare l\textquotesingle{}eliminazione di un contatto e il successivo salvataggio della rubrica all\textquotesingle{}interno del file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & percorso\+\_\+file \mbox{[}200\mbox{]}\+: indica dove si trova il file di input \\
+\hline
+{\em \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}} & c \mbox{[}100\mbox{]}\+: puntatore alle variabili presenti all\textquotesingle{}interno dell\textquotesingle{}omonima struct \\
+\hline
+{\em int} & indice\+\_\+contatto\+\_\+da\+\_\+eliminare\+: l\textquotesingle{}indice, cioè la posizione all\textquotesingle{}interno dell\textquotesingle{}array \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}, del contatto da eliminare \\
+\hline
+{\em int} & numero\+\_\+contatti\+: il numero di contatti presenti nella rubrica \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non ritorna nulla, visto che la funzione è void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rubrica_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{rubrica_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{rubrica.c@{rubrica.c}!main@{main}}
+\index{main@{main}!rubrica.c@{rubrica.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Effettua controlli sugli argomenti inseriti all\textquotesingle{}invocazione del programma e permette le visualizzazioni a schermo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & argc\+: indica la quantità di argomenti con cui il programma è stato invocato \\
+\hline
+{\em char} & $\ast$argv\mbox{[}\mbox{]}\+: contiene gli argomenti con cui il programma è stato invocato \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione ritorna 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rubrica_8c_a4c88c756ace1bba1a20d071a94865474}\label{rubrica_8c_a4c88c756ace1bba1a20d071a94865474}} 
+\index{rubrica.c@{rubrica.c}!ricerca\_contatto@{ricerca\_contatto}}
+\index{ricerca\_contatto@{ricerca\_contatto}!rubrica.c@{rubrica.c}}
+\doxysubsubsection{\texorpdfstring{ricerca\_contatto()}{ricerca\_contatto()}}
+{\footnotesize\ttfamily int ricerca\+\_\+contatto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}}]{c\mbox{[}100\mbox{]},  }\item[{char}]{numero\+\_\+telefono\mbox{[}100\mbox{]},  }\item[{int}]{numero\+\_\+contatti }\end{DoxyParamCaption})}
+
+
+
+Permette di effettuare la ricerca di un carattere in base al suo numero di telefono. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}} & c \mbox{[}100\mbox{]}\+: puntatore alle variabili presenti all\textquotesingle{}interno dell\textquotesingle{}omonima struct \\
+\hline
+{\em int} & numero\+\_\+telefono \mbox{[}100\mbox{]}\+: il numero di telefono ricercato \\
+\hline
+{\em int} & numero\+\_\+contatti\+: il numero di contatti presenti nella rubrica \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int indice\+\_\+ricerca\+: ritorna l\textquotesingle{}indice, cioè la posizione all\textquotesingle{}interno dell\textquotesingle{}array \mbox{\hyperlink{struct_contatto___t}{Contatto\+\_\+T}}, dell\textquotesingle{}elemento ricercato 
+\end{DoxyReturn}

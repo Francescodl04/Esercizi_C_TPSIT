@@ -1,0 +1,174 @@
+.TH "C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c" 3 "Thu Nov 18 2021" "Rubrica" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Famiglia Di Lena/Documents/Scuola/Secondaria di Secondo Grado/IV F A.S. 2021-2022/TPSIT/Programmi in C/Esercizio Rubrica/rubrica.c \- Il programma esegue la gestione di una semplice rubrica presente all'interno di un file di testo (\&.txt) il cui percorso viene indicato nell'invocazione del programma\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <ctype\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBContatto_T\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBacquisci_rubrica\fP (char percorso_file[200], \fBContatto_T\fP c[100])"
+.br
+.RI "Permette di effettuare la lettura del file che contiene la rubrica, inserire le informazioni all'interno di un array e restituire il numero di contatti\&. "
+.ti -1c
+.RI "int \fBricerca_contatto\fP (\fBContatto_T\fP c[100], char numero_telefono[100], int numero_contatti)"
+.br
+.RI "Permette di effettuare la ricerca di un carattere in base al suo numero di telefono\&. "
+.ti -1c
+.RI "void \fBelimina_contatto\fP (char percorso_file[200], \fBContatto_T\fP c[100], int indice_contatto_da_eliminare, int numero_contatti)"
+.br
+.RI "Permette di effettuare l'eliminazione di un contatto e il successivo salvataggio della rubrica all'interno del file\&. "
+.ti -1c
+.RI "void \fBaggiungi_contatto\fP (char percorso_file[200], \fBContatto_T\fP c[100], int numero_contatti)"
+.br
+.RI "Permette di effettuare l'aggiunta di un contatto e il successivo salvataggio della rubrica all'interno del file\&. "
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.RI "Effettua controlli sugli argomenti inseriti all'invocazione del programma e permette le visualizzazioni a schermo\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Il programma esegue la gestione di una semplice rubrica presente all'interno di un file di testo (\&.txt) il cui percorso viene indicato nell'invocazione del programma\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Francesco Di Lena 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+18/11/2021 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int acquisci_rubrica (char percorso_file[200], \fBContatto_T\fP c[100])"
+
+.PP
+Permette di effettuare la lettura del file che contiene la rubrica, inserire le informazioni all'interno di un array e restituire il numero di contatti\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar\fP percorso_file [200]: indica dove si trova il file di input 
+.br
+\fI\fBContatto_T\fP\fP c [100]: puntatore alle variabili presenti all'interno dell'omonima struct 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int numero_contatti: ritorna il numero di contatti presenti all'interno del file in input 
+.RE
+.PP
+
+.SS "void aggiungi_contatto (char percorso_file[200], \fBContatto_T\fP c[100], int numero_contatti)"
+
+.PP
+Permette di effettuare l'aggiunta di un contatto e il successivo salvataggio della rubrica all'interno del file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar\fP percorso_file [200]: indica dove si trova il file di input 
+.br
+\fI\fBContatto_T\fP\fP c [100]: puntatore alle variabili presenti all'interno dell'omonima struct 
+.br
+\fIint\fP numero_contatti: il numero di contatti presenti nella rubrica 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Non ritorna nulla, visto che la funzione è void 
+.RE
+.PP
+
+.SS "void elimina_contatto (char percorso_file[200], \fBContatto_T\fP c[100], int indice_contatto_da_eliminare, int numero_contatti)"
+
+.PP
+Permette di effettuare l'eliminazione di un contatto e il successivo salvataggio della rubrica all'interno del file\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIchar\fP percorso_file [200]: indica dove si trova il file di input 
+.br
+\fI\fBContatto_T\fP\fP c [100]: puntatore alle variabili presenti all'interno dell'omonima struct 
+.br
+\fIint\fP indice_contatto_da_eliminare: l'indice, cioè la posizione all'interno dell'array \fBContatto_T\fP, del contatto da eliminare 
+.br
+\fIint\fP numero_contatti: il numero di contatti presenti nella rubrica 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+Non ritorna nulla, visto che la funzione è void 
+.RE
+.PP
+
+.SS "int main (int argc, char * argv[])"
+
+.PP
+Effettua controlli sugli argomenti inseriti all'invocazione del programma e permette le visualizzazioni a schermo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIint\fP argc: indica la quantità di argomenti con cui il programma è stato invocato 
+.br
+\fIchar\fP *argv[]: contiene gli argomenti con cui il programma è stato invocato 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+La funzione ritorna 0 
+.RE
+.PP
+
+.SS "int ricerca_contatto (\fBContatto_T\fP c[100], char numero_telefono[100], int numero_contatti)"
+
+.PP
+Permette di effettuare la ricerca di un carattere in base al suo numero di telefono\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI\fBContatto_T\fP\fP c [100]: puntatore alle variabili presenti all'interno dell'omonima struct 
+.br
+\fIint\fP numero_telefono [100]: il numero di telefono ricercato 
+.br
+\fIint\fP numero_contatti: il numero di contatti presenti nella rubrica 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+int indice_ricerca: ritorna l'indice, cioè la posizione all'interno dell'array \fBContatto_T\fP, dell'elemento ricercato 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Rubrica from the source code\&.
