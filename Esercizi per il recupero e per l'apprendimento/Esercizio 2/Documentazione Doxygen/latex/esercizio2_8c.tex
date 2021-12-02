@@ -1,0 +1,77 @@
+\hypertarget{esercizio2_8c}{}\doxysection{esercizio2.\+c File Reference}
+\label{esercizio2_8c}\index{esercizio2.c@{esercizio2.c}}
+
+
+Scrivi un programma in linguaggio C che possa ricevere come input un numero intero immesso da tastiera. A tale numero, il processo figlio creato somma 15, mentre il processo padre somma 10. Visualizza il risultato dopo ogni operazione.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{esercizio2_8c_a8193c256e6184ac15cade1c4c20c3e60}{somma}} (int primo\+\_\+addendo, int secondo\+\_\+addendo)
+\begin{DoxyCompactList}\small\item\em Esegue la somma di due numeri. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{esercizio2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em La funzione \mbox{\hyperlink{esercizio2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} permette la creazione di un processo figlio attraverso la funzione fork() e mostra a schermo il PID del processo padre e del figlio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Scrivi un programma in linguaggio C che possa ricevere come input un numero intero immesso da tastiera. A tale numero, il processo figlio creato somma 15, mentre il processo padre somma 10. Visualizza il risultato dopo ogni operazione. 
+
+\begin{DoxyAuthor}{Author}
+Francesco Di Lena, Classe 4F 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/12/2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{esercizio2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{esercizio2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{esercizio2.c@{esercizio2.c}!main@{main}}
+\index{main@{main}!esercizio2.c@{esercizio2.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+La funzione \mbox{\hyperlink{esercizio2_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} permette la creazione di un processo figlio attraverso la funzione fork() e mostra a schermo il PID del processo padre e del figlio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid\+\_\+t} & pid\+\_\+processo \+: PID del processo in esecuzione. \\
+\hline
+{\em int} & primo\+\_\+addendo \+: Il primo addendo inserito dall\textquotesingle{}utente per eseguire l\textquotesingle{}addizione. \\
+\hline
+{\em int} & risultato \+: Il risultato dell\textquotesingle{}addizione. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione ritorna il valore intero 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{esercizio2_8c_a8193c256e6184ac15cade1c4c20c3e60}\label{esercizio2_8c_a8193c256e6184ac15cade1c4c20c3e60}} 
+\index{esercizio2.c@{esercizio2.c}!somma@{somma}}
+\index{somma@{somma}!esercizio2.c@{esercizio2.c}}
+\doxysubsubsection{\texorpdfstring{somma()}{somma()}}
+{\footnotesize\ttfamily int somma (\begin{DoxyParamCaption}\item[{int}]{primo\+\_\+addendo,  }\item[{int}]{secondo\+\_\+addendo }\end{DoxyParamCaption})}
+
+
+
+Esegue la somma di due numeri. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & primo\+\_\+addendo \+: Il primo addendo inserito dall\textquotesingle{}utente per eseguire l\textquotesingle{}addizione. \\
+\hline
+{\em int} & secondo\+\_\+addendo \+: Il secondo addendo che può essere 10 o 15 in base al tipo di processo che richiama la funzione. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione ritorna il valore dei due numeri sommati. 
+\end{DoxyReturn}

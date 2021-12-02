@@ -1,0 +1,2 @@
+Questi esercizi possono essere compilati ed eseguiti solamente in ambiente linux/unix, dato che sono presenti varie system call per la 
+gestione dei processi di questi sistemi operativi.

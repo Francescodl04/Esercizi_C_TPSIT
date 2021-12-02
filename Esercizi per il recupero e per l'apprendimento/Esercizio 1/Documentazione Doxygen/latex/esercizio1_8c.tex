@@ -1,0 +1,51 @@
+\hypertarget{esercizio1_8c}{}\doxysection{esercizio1.\+c File Reference}
+\label{esercizio1_8c}\index{esercizio1.c@{esercizio1.c}}
+
+
+Scrivi un programma C che stampa a video il pid del processo che lancerà un fork e dopo la sua esecuzione sia in grado di identificare i processi genitore e figlio con i relativi pid testando i valori di ritorno della fork.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{esercizio1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em La funzione \mbox{\hyperlink{esercizio1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} permette la creazione di un processo figlio attraverso la funzione fork() e mostra a schermo il PID del processo padre e del figlio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Scrivi un programma C che stampa a video il pid del processo che lancerà un fork e dopo la sua esecuzione sia in grado di identificare i processi genitore e figlio con i relativi pid testando i valori di ritorno della fork. 
+
+\begin{DoxyAuthor}{Author}
+Francesco Di Lena, Classe 4F 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/12/2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{esercizio1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{esercizio1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{esercizio1.c@{esercizio1.c}!main@{main}}
+\index{main@{main}!esercizio1.c@{esercizio1.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+La funzione \mbox{\hyperlink{esercizio1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} permette la creazione di un processo figlio attraverso la funzione fork() e mostra a schermo il PID del processo padre e del figlio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pid\+\_\+t} & pid\+\_\+processo\+: PID del processo in esecuzione. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione è di tipo void, quindi non ritorna alcun valore. 
+\end{DoxyReturn}

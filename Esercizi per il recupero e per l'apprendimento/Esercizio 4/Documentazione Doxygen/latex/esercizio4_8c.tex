@@ -1,0 +1,90 @@
+\hypertarget{esercizio4_8c}{}\doxysection{esercizio4.\+c File Reference}
+\label{esercizio4_8c}\index{esercizio4.c@{esercizio4.c}}
+
+
+Scrivi un programma in linguaggio C che\+:  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{esercizio4_8c_ae1be35907986f50614be933e7214bf26}{trasforma\+\_\+stringhe}} (char stringa\+\_\+da\+\_\+trasformare\mbox{[}15\mbox{]}, int controllo)
+\begin{DoxyCompactList}\small\item\em La funzione \mbox{\hyperlink{esercizio4_8c_ae1be35907986f50614be933e7214bf26}{trasforma\+\_\+stringhe(char stringa\+\_\+da\+\_\+trasformare\mbox{[}15\mbox{]}, int controllo)}} permette di trasformare ogni singolo carattere di una stringa in minuscolo o maiuscolo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{esercizio4_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em La funzione \mbox{\hyperlink{esercizio4_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} permette la creazione di un processo figlio attraverso la funzione fork() e mostra a schermo il PID del processo padre e del figlio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Scrivi un programma in linguaggio C che\+: 
+
+\begin{DoxyAuthor}{Author}
+Francesco Di Lena, Classe 4F 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+02/12/2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0
+\begin{DoxyItemize}
+\item genera due processi padre/figlio;
+\item il processo padre legge il nome e cognome dell’utente e lo trasforma con l’iniziale maiuscola e le altre lettere minuscole (cioè per esempio inserendo “rossi MARIO” produce “\+Rossi Mario”);
+\item il processo padre scrive il nome così trasformato in un file di testo aperto prima di eseguire la fork;
+\item dopo aver completato la scrittura del nome, chiude e rimuove il file creato;
+\item contemporaneamente il processo figlio attende 5 secondi e stampa il contenuto del file appena scritto dal pro-\/ cesso padre convertendo le parole in maiuscolo. 
+\end{DoxyItemize}
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{esercizio4_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{esercizio4_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{esercizio4.c@{esercizio4.c}!main@{main}}
+\index{main@{main}!esercizio4.c@{esercizio4.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+La funzione \mbox{\hyperlink{esercizio4_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}} permette la creazione di un processo figlio attraverso la funzione fork() e mostra a schermo il PID del processo padre e del figlio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em FILE} & $\ast$file \+: Puntatore al file. \\
+\hline
+{\em char} & nome\mbox{[}15\mbox{]} \+: Contiene il nome della persona inserito da tastiera. \\
+\hline
+{\em char} & cognome\mbox{[}15\mbox{]} \+: Contiene il cognome della persona inserito da tastiera. \\
+\hline
+{\em char} & percorso\+\_\+file\mbox{[}20\mbox{]} \+: Contiene il percorso del file in cui verrà salvato il nome e cognome della persona. \\
+\hline
+{\em pid\+\_\+t} & pid\+\_\+processo \+: PID del processo in esecuzione. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione ritorna il valore intero 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{esercizio4_8c_ae1be35907986f50614be933e7214bf26}\label{esercizio4_8c_ae1be35907986f50614be933e7214bf26}} 
+\index{esercizio4.c@{esercizio4.c}!trasforma\_stringhe@{trasforma\_stringhe}}
+\index{trasforma\_stringhe@{trasforma\_stringhe}!esercizio4.c@{esercizio4.c}}
+\doxysubsubsection{\texorpdfstring{trasforma\_stringhe()}{trasforma\_stringhe()}}
+{\footnotesize\ttfamily void trasforma\+\_\+stringhe (\begin{DoxyParamCaption}\item[{char}]{stringa\+\_\+da\+\_\+trasformare\mbox{[}15\mbox{]},  }\item[{int}]{controllo }\end{DoxyParamCaption})}
+
+
+
+La funzione \mbox{\hyperlink{esercizio4_8c_ae1be35907986f50614be933e7214bf26}{trasforma\+\_\+stringhe(char stringa\+\_\+da\+\_\+trasformare\mbox{[}15\mbox{]}, int controllo)}} permette di trasformare ogni singolo carattere di una stringa in minuscolo o maiuscolo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & stringa\+\_\+da\+\_\+trasformare\mbox{[}15\mbox{]} \+: Contiene la stringa che deve essere trasformata \\
+\hline
+{\em int} & controllo \+: Stabilisce se rendere un carattere maiuscolo o minuscolo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione è di tipo void, quindi non ritorna nulla. 
+\end{DoxyReturn}

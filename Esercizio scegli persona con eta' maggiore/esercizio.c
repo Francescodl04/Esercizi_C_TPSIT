@@ -1,6 +1,6 @@
-/**@author Francesco Di Lena
- **@date 08/11/2021
- **@filename esercizio_scegli_piu_vecchio.c
+/** @file esercizio_scegli_piu_vecchio.c 
+ * @author Francesco Di Lena
+ * @date 08/11/2021
  */
 
 #include <stdio.h>
