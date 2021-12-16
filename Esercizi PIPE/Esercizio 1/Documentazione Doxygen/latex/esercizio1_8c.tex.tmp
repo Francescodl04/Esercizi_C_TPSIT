@@ -1,0 +1,134 @@
+\hypertarget{esercizio1_8c}{}\doxysection{esercizio1.\+c File Reference}
+\label{esercizio1_8c}\index{esercizio1.c@{esercizio1.c}}
+
+
+Si realizzi un programma C in cui due processi, uno padre e l\textquotesingle{}altro figlio, interagiscono. Il processo padre genera casualmente (funzione rand()) 10 numeri interi e li passa al figlio. ~\newline
+ Il processo figlio esegue la somma dei numeri passati dal padre e gli restituisce il risultato. Il processo padre stampa a video il risultato.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for esercizio1.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{esercizio1_8c_a22d14ef0fbcf70a62436e6a80bb30eef}\label{esercizio1_8c_a22d14ef0fbcf70a62436e6a80bb30eef}} 
+\#define \mbox{\hyperlink{esercizio1_8c_a22d14ef0fbcf70a62436e6a80bb30eef}{N\+U\+M\+E\+R\+I\+\_\+\+G\+E\+N\+E\+R\+A\+TI}}~10
+\begin{DoxyCompactList}\small\item\em Indica il numero di numeri che devono essere generati casualmente. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{esercizio1_8c_a38f0245175716a50e35bdbc92039b316}\label{esercizio1_8c_a38f0245175716a50e35bdbc92039b316}} 
+\#define \mbox{\hyperlink{esercizio1_8c_a38f0245175716a50e35bdbc92039b316}{L\+U\+N\+G\+H\+E\+Z\+Z\+A\+\_\+\+C\+O\+N\+T\+E\+N\+U\+T\+O\+\_\+\+L\+E\+T\+T\+O\+\_\+\+P\+I\+PE}}~100
+\begin{DoxyCompactList}\small\item\em Indica la lunghezza della stringa che rappresentetà il contenuto letto da una pipe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{esercizio1_8c_a31678ff5ad37deb5b9fbf52bac4f74fa}\label{esercizio1_8c_a31678ff5ad37deb5b9fbf52bac4f74fa}} 
+\#define \mbox{\hyperlink{esercizio1_8c_a31678ff5ad37deb5b9fbf52bac4f74fa}{M\+A\+X\+\_\+\+R\+A\+N\+D\+OM}}~100
+\begin{DoxyCompactList}\small\item\em Indica il numero massimo che può essere generato casualmente. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{esercizio1_8c_a820253adfe2d0d89043ceef934030837}\label{esercizio1_8c_a820253adfe2d0d89043ceef934030837}} 
+\#define \mbox{\hyperlink{esercizio1_8c_a820253adfe2d0d89043ceef934030837}{M\+I\+N\+\_\+\+R\+A\+N\+D\+OM}}~1
+\begin{DoxyCompactList}\small\item\em Indica il numero minimo che può essere generato casualmente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{esercizio1_8c_a6d781e77b6f1d4c042809b16a4374e1d}{genera\+\_\+numeri\+\_\+casuali}} (char numeri\+\_\+generati\+\_\+casualmente\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Permette di generare numeri casuali sempre diversi fra loro e di inserirli all\textquotesingle{}interno di un array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{esercizio1_8c_ac914cec67321652ad017767f045baab3}{somma\+\_\+numeri}} (char numeri\+\_\+da\+\_\+sommare\mbox{[}$\,$\mbox{]}, char risultato\+\_\+somma\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Svolge la somma di tutti i numeri presenti all\textquotesingle{}interno di un array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{esercizio1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Questa funzione permette la creazione di un processo figlio attraverso la funzione fork(), di due canali di tipo pipe e visualizzare a schermo i risultati delle altre due funzioni. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Si realizzi un programma C in cui due processi, uno padre e l\textquotesingle{}altro figlio, interagiscono. Il processo padre genera casualmente (funzione rand()) 10 numeri interi e li passa al figlio. ~\newline
+ Il processo figlio esegue la somma dei numeri passati dal padre e gli restituisce il risultato. Il processo padre stampa a video il risultato. 
+
+\begin{DoxyAuthor}{Author}
+Francesco Di Lena, Classe 4F 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/12/2021 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{esercizio1_8c_a6d781e77b6f1d4c042809b16a4374e1d}\label{esercizio1_8c_a6d781e77b6f1d4c042809b16a4374e1d}} 
+\index{esercizio1.c@{esercizio1.c}!genera\_numeri\_casuali@{genera\_numeri\_casuali}}
+\index{genera\_numeri\_casuali@{genera\_numeri\_casuali}!esercizio1.c@{esercizio1.c}}
+\doxysubsubsection{\texorpdfstring{genera\_numeri\_casuali()}{genera\_numeri\_casuali()}}
+{\footnotesize\ttfamily void genera\+\_\+numeri\+\_\+casuali (\begin{DoxyParamCaption}\item[{char}]{numeri\+\_\+generati\+\_\+casualmente\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Permette di generare numeri casuali sempre diversi fra loro e di inserirli all\textquotesingle{}interno di un array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & numeri\+\_\+generati\+\_\+casualmente\mbox{[}N\+U\+M\+E\+R\+I\+\_\+\+G\+E\+N\+E\+R\+A\+TI\mbox{]} \+: Array che verrà popolato dai numeri generati casualmente. \\
+\hline
+{\em int} & i \+: Indice usato nel ciclo for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione è di tipo void, pertanto non restituisce nulla. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{esercizio1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{esercizio1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{esercizio1.c@{esercizio1.c}!main@{main}}
+\index{main@{main}!esercizio1.c@{esercizio1.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Questa funzione permette la creazione di un processo figlio attraverso la funzione fork(), di due canali di tipo pipe e visualizzare a schermo i risultati delle altre due funzioni. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & file\+\_\+descriptor1\mbox{[}2\mbox{]} \+: array che contiene il file-\/descriptor del primo canale pipe. \\
+\hline
+{\em int} & file\+\_\+descriptor2\mbox{[}2\mbox{]} \+: array che contiene il file-\/descriptor del secondo canale pipe. \\
+\hline
+{\em int} & status\+\_\+wait \+: contiene il puntatore al P\+ID del processo che si deve attendere. \\
+\hline
+{\em char} & contenuto\+\_\+letto\mbox{[}L\+U\+N\+G\+H\+E\+Z\+Z\+A\+\_\+\+C\+O\+N\+T\+E\+N\+U\+T\+O\+\_\+\+L\+E\+T\+T\+O\+\_\+\+P\+I\+PE\mbox{]} \+: array che contiene il contenuto letto dai due canali pipe. \\
+\hline
+{\em pid\+\_\+t} & pid \+: contiene il valore del P\+ID del processo che viene eseguito dopo la fork. \\
+\hline
+{\em char} & numeri\+\_\+generati\+\_\+casualmente\mbox{[}N\+U\+M\+E\+R\+I\+\_\+\+G\+E\+N\+E\+R\+A\+TI\mbox{]} \+: array che contiene i numeri generati casualmente. \\
+\hline
+{\em int} & i \+: indice usato nel ciclo for. \\
+\hline
+{\em char} & risultato\+\_\+somma\mbox{[}L\+U\+N\+G\+H\+E\+Z\+Z\+A\+\_\+\+C\+O\+N\+T\+E\+N\+U\+T\+O\+\_\+\+L\+E\+T\+T\+O\+\_\+\+P\+I\+PE\mbox{]}\+: array che contiene il risultato della somma . \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione restituisce il valore intero 0. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{esercizio1_8c_ac914cec67321652ad017767f045baab3}\label{esercizio1_8c_ac914cec67321652ad017767f045baab3}} 
+\index{esercizio1.c@{esercizio1.c}!somma\_numeri@{somma\_numeri}}
+\index{somma\_numeri@{somma\_numeri}!esercizio1.c@{esercizio1.c}}
+\doxysubsubsection{\texorpdfstring{somma\_numeri()}{somma\_numeri()}}
+{\footnotesize\ttfamily void somma\+\_\+numeri (\begin{DoxyParamCaption}\item[{char}]{numeri\+\_\+da\+\_\+sommare\mbox{[}$\,$\mbox{]},  }\item[{char}]{risultato\+\_\+somma\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Svolge la somma di tutti i numeri presenti all\textquotesingle{}interno di un array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & numeri\+\_\+da\+\_\+sommare \mbox{[}N\+U\+M\+E\+R\+I\+\_\+\+G\+E\+N\+E\+R\+A\+TI\mbox{]} \+: array popolato dai numeri che dovranno essere sommati. \\
+\hline
+{\em char} & risultato\+\_\+somma\mbox{[}\mbox{]} \+: array che contiene il risultato della somma espresso in caratteri. \\
+\hline
+{\em int} & i \+: indice usato nel ciclo for. \\
+\hline
+{\em int} & somma \+: contiene la somma dei numeri presenti all\textquotesingle{}interno dell\textquotesingle{}array. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione è di tipo void, pertanto non restituisce nulla. 
+\end{DoxyReturn}
