@@ -1,0 +1,62 @@
+\hypertarget{esercizio_8c}{}\doxysection{esercizio.\+c File Reference}
+\label{esercizio_8c}\index{esercizio.c@{esercizio.c}}
+
+
+Si realizzi un programma C in cui vengono creati tre processi\+: un padre e due figli. Attraverso il piping in C e la funzione execlp(), con il programma ~\newline
+ si deve ottenere un risultato simile al comando cat file.\+txt $\vert$ wc.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+Include dependency graph for esercizio.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{esercizio_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em La funzione \mbox{\hyperlink{esercizio_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}}, l\textquotesingle{}unica locale che compone il programma, svolge tutti i compiti prefissati e descritti dalla consegna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Si realizzi un programma C in cui vengono creati tre processi\+: un padre e due figli. Attraverso il piping in C e la funzione execlp(), con il programma ~\newline
+ si deve ottenere un risultato simile al comando cat file.\+txt $\vert$ wc. 
+
+\begin{DoxyAuthor}{Author}
+Francesco Di Lena, classe 4 F 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+03/02/2022 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{esercizio_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{esercizio_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{esercizio.c@{esercizio.c}!main@{main}}
+\index{main@{main}!esercizio.c@{esercizio.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+La funzione \mbox{\hyperlink{esercizio_8c_a0ddf1224851353fc92bfbff6f499fa97}{main()}}, l\textquotesingle{}unica locale che compone il programma, svolge tutti i compiti prefissati e descritti dalla consegna. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & argc \+: indica il numero di argomenti con cui è stato invocato il programma. \\
+\hline
+{\em char} & $\ast$argv\mbox{[}\mbox{]}\+: array degli argomenti con cui è stato invocato il programma. \\
+\hline
+{\em int} & file\+\_\+descriptor\mbox{[}2\mbox{]}\+: array usato per il contenimento dei file descriptor durante l\textquotesingle{}uso di un canale P\+I\+PE. \\
+\hline
+{\em pid\+\_\+t} & pid \+: variabile usata per contenere il P\+ID del processo in esecuzione in caso di fork(). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La funzione ritorna il valore intero 0 (zero). 
+\end{DoxyReturn}
