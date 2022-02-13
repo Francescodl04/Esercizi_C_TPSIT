@@ -20,23 +20,23 @@
 #define DIMENSIONE_CANALE_PIPE 2
 
 /**
- * @brief
- * @param
- * @return int
+ * @fn int main(int argc, char *argv[])
+ * @brief Esegue tutto il programma in quest'unica funzione.
+ * @return Il padre ritorna il valore zero, mentre il figlio il valore -1.
  */
 int main(int argc, char *argv[])
 {
     printf("\nBenvenuto nel programma!\n");
     if (argc == 2)
     {
-        FILE *file;
+        int file;
         pid_t pid;
         char stringa_ingresso[GRANDEZZA_STRINGA_INPUT];
         char risultato[GRANDEZZA_STRINGA_OUTPUT];
         int canale_pipe[DIMENSIONE_CANALE_PIPE];
         int numero_stringhe_trovate = 0;
-        open(argv[1], O_WRONLY, file);
-        if (file == NULL)
+        file = open(argv[1], O_WRONLY);
+        if (file == 0)
         {
             printf("Il percorso del file indicato non è corretto, riprova...\n");
         }
@@ -56,27 +56,32 @@ int main(int argc, char *argv[])
                         dup(canale_pipe[1]);
                         close(canale_pipe[0]);
                         close(canale_pipe[1]);
-                        execl("/usr/bin/grep", "grep", "-c", (char *)0);
+                        execl("/usr/bin/grep", "grep", "-c", stringa_ingresso, argv[1], (char *)0);
                         return -1;
                     }
                     else
                     {
                         wait(&pid);
                         read(canale_pipe[0], risultato, sizeof(risultato));
-                        printf("La stringa \"%s\" e' stata trovata %d volte.\n", stringa_ingresso, atoi(risultato));
-                        numero_stringhe_trovate += atoi(risultato);
+                        int i;
+                        for (i = 0; i < strlen(stringa_ingresso); i++)
+                        {
+                            stringa_ingresso[i] = toupper(stringa_ingresso[i]);
+                        }
+                        if (strcmp(stringa_ingresso, "FINE") != 0)
+                        {
+                            printf("La stringa \"%s\" e' stata trovata %d volte.\n", stringa_ingresso, atoi(risultato));
+                            numero_stringhe_trovate += atoi(risultato);
+                        }
                     }
                 }
-            } while (strcmp(stringa_ingresso, "FINE") == 0);
-            printf("\nIl numero totale di stringhe trovate e': %d volte.", numero_stringhe_trovate);
+            } while (strcmp(stringa_ingresso, "FINE") != 0);
+            printf("\nIl numero totale di stringhe trovate e': %d.\n", numero_stringhe_trovate);
         }
     }
     else
     {
         printf("Non hai inserito un numero corretto di argomenti. Riprova...\n");
     }
-    printf("Per uscire dal programma premi un tasto qualsiasi...\n");
-    fflush(stdin);
-    getchar();
     return 0;
 }
