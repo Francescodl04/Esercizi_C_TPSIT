@@ -1,8 +1,8 @@
 /**
  * @file esercizio7.c
  * @author Francesco Di Lena, classe 4F
- * @brief Esercizio 7 sulla programmazione di sistema.
- * @version 0.1
+ * @brief Esercizio 7 sulla programmazione di sistema (vedi testo esercizio su repository GitHub).
+ * @version 0.1 (esecuzione traceroute)
  * @date 2022-03-04
  *
  * @copyright Copyright (c) 2022
@@ -33,8 +33,6 @@ int main(int argc, char *argv[])
         double totale = 0;
         char contenuto_letto[1], *puntatore, stringa_importo[100];
         pipe(p1p2);
-        pipe(p2p3);
-        pipe(p3p0);
         pid = fork();
         if (pid == 0)
         {
@@ -42,12 +40,12 @@ int main(int argc, char *argv[])
             dup(p1p2[1]);
             close(p1p2[0]);
             close(p1p2[1]);
-            execl("/usr/bin/cat", "cat", argv[1], NULL);
+            execl("/usr/sbin/traceroute", "traceroute", argv[1], NULL);
             return -1;
         }
         else
         {
-            
+            pipe(p2p3);
             pid = fork();
             if (pid == 0)
             {
@@ -64,6 +62,9 @@ int main(int argc, char *argv[])
             }
             else
             {
+                pipe(p3p0);
+                close(p1p2[0]);
+                close(p1p2[1]);
                 pid = fork();
                 if (pid == 0)
                 {
@@ -80,24 +81,19 @@ int main(int argc, char *argv[])
                 }
                 else
                 {
-                    close(p1p2[0]);
-                    close(p1p2[1]);
                     close(p2p3[0]);
                     close(p2p3[1]);
                     close(p3p0[1]);
-                    while (read(p3p0[0], &contenuto_letto, 1) > 0)
+                    while ((read(p3p0[0], contenuto_letto, 1)) > 0)
                     {
                         if (contenuto_letto[0] != '\n')
                         {
                             strncat(stringa_importo, &contenuto_letto[0], sizeof(contenuto_letto[0]));
                         }
-                        else
+                        else if (strcmp(stringa_importo, "*") != 0)
                         {
-                            if (strcmp(stringa_importo, "*") != 0)
-                            {
-                                totale += strtod(stringa_importo, &puntatore);
-                                stringa_importo[0] = '\0';
-                            }
+                            totale += strtod(stringa_importo, &puntatore);
+                            stringa_importo[0] = '\0';
                         }
                     }
                     close(p3p0[0]);
