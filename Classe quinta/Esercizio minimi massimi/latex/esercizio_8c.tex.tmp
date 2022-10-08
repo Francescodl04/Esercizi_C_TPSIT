@@ -1,0 +1,30 @@
+\hypertarget{esercizio_8c}{}\doxysection{esercizio.\+c File Reference}
+\label{esercizio_8c}\index{esercizio.c@{esercizio.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/wait.\+h$>$}\newline
+Include dependency graph for esercizio.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{Indent}\textbf{ Francesco Di Lena, classe 5F}\par
+{\em Il programma individua il massimo e il minimo da una serie di numeri.
+
+\begin{DoxyDate}{Date}
+16/09/2022 
+\end{DoxyDate}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{esercizio_8c_ae1a432a3f1bf15aaca54d33aff1068d9}\label{esercizio_8c_ae1a432a3f1bf15aaca54d33aff1068d9}} 
+int {\bfseries individua\+\_\+massimo} (int index, int numeri\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{esercizio_8c_acd0ecdf62f307cb29ef240811370ac27}\label{esercizio_8c_acd0ecdf62f307cb29ef240811370ac27}} 
+int {\bfseries individua\+\_\+minimo} (int index, int numeri\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\Hypertarget{esercizio_8c_a91a3bbcc7eb26e8695255b2795d6e46f}\label{esercizio_8c_a91a3bbcc7eb26e8695255b2795d6e46f}} 
+void {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\end{Indent}
